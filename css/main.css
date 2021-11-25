@@ -1,0 +1,314 @@
+:root {
+    --light: #ffffff;
+    --dark: #34364A;
+    --white: #ffffff;
+    --black: #000000;
+    --primary: #4a67e9;
+}
+
+*, *::before, *::after {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    height: 2000px;
+    background-color: var(--light);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus, input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ==================================
+- Container Styles
+================================== */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1180px;
+    }
+}
+
+/* ==================================
+- Navbar Styles
+================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: var(--white);
+    transition: all 0.3s;
+}
+
+.navbar.scrolled {
+    position: fixed;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+
+@media screen and (min-width: 768px) {
+    .navbar.scrolled {
+        animation: on-navbar-scrolled 0.3s;
+    }
+}
+
+.navbar .navbar_container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar .navbar_container {
+        max-width: 1180px;
+    }
+}
+
+.navbar .brand_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .brand_wrapper {
+        width: max-content;
+    }
+}
+
+.navbar .brand_wrapper .navbar_brand {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.navbar .brand_wrapper .menu_toggler {
+    z-index: 50;
+    font-size: 1.4rem;
+}
+
+.navbar .brand_wrapper .menu_toggler.toggled {
+    position: fixed;
+    top: 2rem;
+    right: 1rem;
+    font-size: 1.15rem;
+    color: var(--light);
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .brand_wrapper .menu_toggler {
+        display: none;
+    }
+}
+
+.navbar .navbar_collapse {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .navbar_collapse {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .navbar_collapse .nav_menu {
+        display: flex;
+        align-items: center;
+        gap: 2.75rem;
+    }
+}
+
+.navbar .navbar_collapse .nav_menu .nav_link {
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar .navbar_collapse .nav_menu .signin_button {
+        border: 1px solid var(--dark);
+        border-radius: 0.3rem;
+        padding: 0.4rem 1.5rem;
+        transition: all 0.25s;
+    }
+
+    .navbar .navbar_collapse .nav_menu .signin_button:hover {
+        background-color: var(--dark);
+        color: var(--white);
+    }
+}
+
+/* ==================================
+- Active Menu
+================================== */
+
+.navbar .navbar_collapse.show {
+    position: fixed;
+    inset: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar .navbar_collapse.show .nav_menu {
+    position: absolute;
+    top: 7.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    padding: 1.5rem 1.75rem;
+}
+
+.navbar .navbar_collapse.show .nav_menu .nav_link {
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.075);
+    text-align: center;
+    border-radius: 0.3rem;
+    margin: 1rem 0;
+    padding: 0.5rem 1.5rem;
+}
+
+/* ==================================
+- Section Styles
+================================== */
+
+section {
+    padding: 2rem 0;
+}
+
+/* ==================================
+- Hero Styles
+================================== */
+
+#hero {
+    min-height: 475px;
+    display: flex;
+    align-items: center;
+}
+
+#hero .main_hero {
+    display: grid;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media screen and (min-width: 1024px) {
+    #hero .main_hero {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+#hero .hero_content {
+    max-width: 575px;
+    margin: 0 auto;
+}
+
+#hero .hero_content .hero_title {
+    font-size: clamp(2rem, 7vw, 2.45rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    #hero .hero_content .hero_title {
+        font-size: clamp(1.75rem, 3vw, 2.45rem);
+    }
+}
+
+#hero .hero_content .subtitle {
+    font-size: 1.05rem;
+    font-weight: 400;
+    margin-bottom: 2.25rem;
+}
+
+#hero .hero_content .get_started_button {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 0.3rem;
+    padding: 0.65rem 2rem;
+}
+
+#hero .hero_image {
+    max-width: 575px;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
+
+/* ==================================
+- Animations
+================================== */
+
+@keyframes on-navbar-scrolled {
+    0% {
+        transform: translateY(-50%);
+    } 100% {
+        transform: translateY(0%);
+    }
+}
