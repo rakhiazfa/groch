@@ -407,7 +407,7 @@ section .title {
 
 #testimonial .main_testimonial .testimonials .testimonial_card.active {
     display: block;
-    animation: testimonial-card-animation 0.5s;
+    animation: testimonial-card-animation 0.75s;
 }
 
 #testimonial .main_testimonial .testimonials .testimonial_card .testimonial_image {

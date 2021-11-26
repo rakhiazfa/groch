@@ -58,7 +58,7 @@ prevButton.addEventListener("click", function() {
         testimonialCards[activeTestimonial].classList.add("active");
     }
     
-})
+});
 
 nextButton.addEventListener("click", function() {
     if(activeTestimonial < testimonialCards.length - 1) {
@@ -70,4 +70,8 @@ nextButton.addEventListener("click", function() {
         testimonialCards[testimonialCards.length - 1].classList.remove("active");
         testimonialCards[activeTestimonial].classList.add("active");
     }
-})
+});
+
+setInterval(() => {
+    nextButton.click();
+}, 3500)
