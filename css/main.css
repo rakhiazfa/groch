@@ -3,7 +3,7 @@
     --dark: #34364A;
     --white: #ffffff;
     --black: #000000;
-    --primary: #4a67e9;
+    --primary: #3B82F6;
 }
 
 *, *::before, *::after {
@@ -51,6 +51,12 @@ button:focus, input:focus {
     outline: none;
 }
 
+input {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 a {
     text-decoration: none;
 }
@@ -93,12 +99,15 @@ i {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 70px;
     background-color: var(--white);
     transition: all 0.3s;
 }
 
-
+.navbar.scrolled {
+    position: fixed;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
 
 @media screen and (min-width: 768px) {
     .navbar.scrolled {
@@ -366,6 +375,21 @@ section .title {
     margin: 0 auto;
 }
 
+#course .main_course .courses .course_card .start_course {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    font-size: 0.95rem;
+    color: var(--white);
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    transition: all 0.3s;
+}
+
+#course .main_course .courses .course_card .start_course:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
 /* ==================================
 - Testimonial Styles
 ================================== */
@@ -446,6 +470,77 @@ section .title {
     top: 50%;
     right: 0rem;
     transform: translateY(-50%);
+}
+
+/* ==================================
+- Auth Page
+================================== */
+
+.auth .container {
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth .auth_card {
+    width: 400px;
+    border: 1px solid rgba(7, 6, 6, 0.1);
+    border-radius: 0.5rem;
+    padding: 2rem 1.5rem;
+}
+
+.auth .auth_card .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.auth .auth_card .form-input {
+    font-size: 0.95rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.7rem;
+}
+
+.auth .auth_card .auth_button {
+    display: block;
+    width: 100%;
+    background-color: var(--primary);
+    text-align: center;
+    color: var(--white);
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+}
+
+.auth .auth_card .redirect_to_signup {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.auth .auth_card .redirect_to_signup a {
+    color: var(--primary);
+}
+
+.auth .back_button {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 1.25rem;
+}
+
+/* ==================================
+- Footer
+================================== */
+
+footer .container {
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    text-align: center;
 }
 
 /* ==================================

@@ -26,7 +26,15 @@ navLinks.forEach((link) => {
     });
 });
 
-window.addEventListener("resize", function () {
+window.addEventListener("scroll", function() {
+    if(window.scrollY > 250) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+
+window.addEventListener("resize", function() {
     if (window.innerWidth > 768) {
         navbarCollapse.classList.remove("show");
         menuToggler.classList.remove("toggled");
