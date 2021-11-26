@@ -26,14 +26,6 @@ navLinks.forEach((link) => {
     });
 });
 
-window.addEventListener("scroll", function () {
-    if (window.scrollY > document.querySelector("#hero").clientHeight + 100) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-});
-
 window.addEventListener("resize", function () {
     if (window.innerWidth > 768) {
         navbarCollapse.classList.remove("show");
@@ -43,3 +35,39 @@ window.addEventListener("resize", function () {
         togglerIcon.classList.add("fi-rr-align-right");
     }
 });
+
+/* ==================================
+- Testimonial
+================================== */
+
+const testimonial = document.querySelector("#testimonial");
+const prevButton = testimonial.querySelector(".prev_button");
+const nextButton = testimonial.querySelector(".next_button");
+
+let activeTestimonial = 0;
+let testimonialCards = document.querySelectorAll(".testimonial_card");
+
+prevButton.addEventListener("click", function() {
+    if(activeTestimonial > 0) {
+        activeTestimonial -= 1;
+        testimonialCards[activeTestimonial + 1].classList.remove("active");
+        testimonialCards[activeTestimonial].classList.add("active");
+    } else {
+        activeTestimonial = testimonialCards.length - 1;
+        testimonialCards[0].classList.remove("active");
+        testimonialCards[activeTestimonial].classList.add("active");
+    }
+    
+})
+
+nextButton.addEventListener("click", function() {
+    if(activeTestimonial < testimonialCards.length - 1) {
+        activeTestimonial += 1;
+        testimonialCards[activeTestimonial - 1].classList.remove("active");
+        testimonialCards[activeTestimonial].classList.add("active");
+    } else {
+        activeTestimonial = 0;
+        testimonialCards[testimonialCards.length - 1].classList.remove("active");
+        testimonialCards[activeTestimonial].classList.add("active");
+    }
+})

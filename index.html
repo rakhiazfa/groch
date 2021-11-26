@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Flaticon -->
     <link rel="stylesheet" href="vendor/flaticon/css/uicons-regular-rounded.css">
@@ -19,7 +20,7 @@
 
 <body>
 
-    
+
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -33,8 +34,8 @@
             <div class="navbar_collapse">
                 <ul class="nav_menu">
                     <li><a class="nav_link" href="#">Home</a></li>
-                    <li><a class="nav_link" href="#">Courses</a></li>
-                    <li><a class="nav_link" href="#">Testimonials</a></li>
+                    <li><a class="nav_link" href="#course">Courses</a></li>
+                    <li><a class="nav_link" href="#testimonial">Testimonials</a></li>
                     <li><a class="nav_link signin_button" href="#">Login</a></li>
                 </ul>
             </div>
@@ -51,7 +52,8 @@
                 <div class="main_hero">
                     <div class="hero_content">
                         <h1 class="hero_title">Buat Kemampuan Anda Menjadi Lebih Baik.</h1>
-                        <p class="subtitle">Belajar dengan guru yang menyenangkan dan telah berpengalaman di bidangnya.</p>
+                        <p class="subtitle">Belajar dengan guru yang menyenangkan dan telah berpengalaman di bidangnya.
+                        </p>
                         <a class="get_started_button" href="#">Daftar Sekarang</a>
                     </div>
                     <img src="img/hero-image.jpg" class="hero_image" alt="">
@@ -68,25 +70,25 @@
                     <div class="courses">
                         <a href="#">
                             <div class="course_card">
-                                <img src="img/web-design.png" class="course_image"/>
+                                <img src="img/web-design.png" class="course_image" />
                                 <h2 class="course_title">Web Design</h2>
                             </div>
                         </a>
                         <a href="#">
                             <div class="course_card">
-                                <img src="img/frontend-developer.png" class="course_image"/>
+                                <img src="img/frontend-developer.png" class="course_image" />
                                 <h2 class="course_title">Frontend Development</h2>
                             </div>
                         </a>
                         <a href="#">
                             <div class="course_card">
-                                <img src="img/backend-developer.png" class="course_image"/>
+                                <img src="img/backend-developer.png" class="course_image" />
                                 <h2 class="course_title">Backend Development</h2>
                             </div>
                         </a>
                         <a href="#">
                             <div class="course_card">
-                                <img src="img/android-developer.png" class="course_image"/>
+                                <img src="img/android-developer.png" class="course_image" />
                                 <h2 class="course_title">Android Development</h2>
                             </div>
                         </a>
@@ -95,6 +97,47 @@
             </div>
         </section>
         <!-- /Course -->
+
+        <!-- Testimonial -->
+        <section id="testimonial">
+            <div class="container">
+                <div class="main_testimonial">
+                    <div class="title">Testimonials</div>
+                    <div class="testimonials">
+                        <div class="testimonial_card active">
+                            <img src="img/testimonials/1.jpg" class="testimonial_image"
+                                alt="Student of Web Design Course">
+                            <div>
+                                <p class="paragraph">"Setelah mengikuti kursus web design di groch, saya sekarang dapat bekerja menjadi UI / UX di Google."</p>
+                                <p class="student">- Ozand Achmad -</p>
+                            </div>
+                        </div>
+                        <div class="testimonial_card">
+                            <img src="img/testimonials/2.jpg" class="testimonial_image"
+                                alt="Student of Frontend Course">
+                            <div>
+                                <p class="paragraph">"Setelah mengikuti kursus frontend di groch, saya sekarang dapat bekerja menjadi Programmer di BPP."</p>
+                                <p class="student">- Reyhan Maulizard -</p>
+                            </div>
+                        </div>
+                        <div class="testimonial_card">
+                            <img src="img/testimonials/3.jpg" class="testimonial_image"
+                                alt="Student of Backend Course">
+                            <div>
+                                <p class="paragraph">"Setelah mengikuti kursus backend di groch, saya sekarang dapat
+                                    bekerja menjadi supermannn."</p>
+                                <p class="student">- Abdhul Rohman -</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow_button">
+                        <button class="prev_button"><i class="fi fi-rr-angle-left"></i></button>
+                        <button class="next_button"><i class="fi fi-rr-angle-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Testimonial -->
 
     </main>
     <!-- /Main -->

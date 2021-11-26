@@ -18,6 +18,7 @@
 html, body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -88,6 +89,7 @@ i {
 ================================== */
 
 .navbar {
+    z-index: 999;
     display: flex;
     align-items: center;
     width: 100%;
@@ -96,10 +98,7 @@ i {
     transition: all 0.3s;
 }
 
-.navbar.scrolled {
-    position: fixed;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
-}
+
 
 @media screen and (min-width: 768px) {
     .navbar.scrolled {
@@ -368,6 +367,88 @@ section .title {
 }
 
 /* ==================================
+- Testimonial Styles
+================================== */
+
+@media screen and (min-width: 1024px) {
+    #testimonial {
+        min-height: 475px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#testimonial .container {
+    position: relative;
+}
+
+#testimonial .main_testimonial .title {
+    text-align: center;
+    margin-bottom: 2.75rem;
+}
+
+#testimonial .main_testimonial .testimonials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2.75rem;
+}
+
+#testimonial .main_testimonial .testimonials .testimonial_card {
+    display: none;
+    width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+    #testimonial .main_testimonial .testimonials .testimonial_card {
+        width: 375px;
+    }
+}
+
+#testimonial .main_testimonial .testimonials .testimonial_card.active {
+    display: block;
+    animation: testimonial-card-animation 0.5s;
+}
+
+#testimonial .main_testimonial .testimonials .testimonial_card .testimonial_image {
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#testimonial .main_testimonial .testimonials .testimonial_card .paragraph {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+#testimonial .main_testimonial .testimonials .testimonial_card .student {
+    font-weight: 500;
+    text-align: center;
+}
+
+#testimonial .main_testimonial .flow_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 2.5rem;
+}
+
+#testimonial .main_testimonial .flow_button .prev_button {
+    position: absolute;
+    top: 50%;
+    left: 0rem;
+    transform: translateY(-50%);
+}
+
+#testimonial .main_testimonial .flow_button .next_button {
+    position: absolute;
+    top: 50%;
+    right: 0rem;
+    transform: translateY(-50%);
+}
+
+/* ==================================
 - Animations
 ================================== */
 
@@ -376,5 +457,15 @@ section .title {
         transform: translateY(-50%);
     } 100% {
         transform: translateY(0%);
+    }
+}
+
+@keyframes testimonial-card-animation {
+    0% {
+        opacity: 0%;
+        transform: scale(0);
+    } 100% {
+        opacity: 100%;
+        transform: scale(1);
     }
 }
