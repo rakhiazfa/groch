@@ -83,3 +83,24 @@ nextButton.addEventListener("click", function() {
 setInterval(() => {
     nextButton.click();
 }, 3500)
+
+/* ==================================
+- Page Scroll
+================================== */
+
+const pageScroll = document.querySelectorAll(".page_scroll");
+
+pageScroll.forEach(function(link) {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        const href = e.target.getAttribute("href");
+        
+        const scrollTop = document.querySelector(href).offsetTop;
+
+        scroll({
+            top: scrollTop - 125,
+            behavior: "smooth"
+        })
+    })
+});

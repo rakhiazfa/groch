@@ -21,14 +21,21 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar-login">
+    <nav class="navbar_login">
         <div class="navbar_container">
             <div class="brand_wrapper">
                 <a class="navbar_brand" href="/">Groch.</a>
             </div>
             <div class="navbar_collapse">
                 <ul class="nav_menu">
-                    <li><button class="wrapper_profile">Abdhul Gaming<img src="img/testimonials/3.jpg" class="profile" alt="Profile"></button></li>
+                    <li class="profile">
+                        <button class="profile_button">Abdhul Gaming<img src="img/testimonials/3.jpg" class="profile_image" alt="Profile"></button>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="index.html">Logout</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -42,6 +49,7 @@
         <section id="course">
             <div class="container">
                 <div class="main_course">
+                    <h1 class="title" style="text-align: left;">Kursus</h1>
                     <div class="courses">
                         <div class="course_card">
                             <img src="img/web-design.png" class="course_image" />
@@ -79,6 +87,23 @@
         </div>
     </footer>
     <!-- /Footer -->
+
+    <script>
+
+        /* ==================================
+        - Profile
+        ================================== */
+
+        const profile = document.querySelector(".profile");
+        console.log(profile)
+        const profileButton = profile.querySelector(".profile_button");
+        const profileDropdown = profile.querySelector(".dropdown");
+
+        profileButton.addEventListener("click", function() {
+            profileDropdown.classList.toggle("active");
+        });
+
+    </script>
 
     <!-- Main JS -->
     <script src="js/main.js"></script>
