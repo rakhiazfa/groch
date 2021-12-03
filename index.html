@@ -12,6 +12,9 @@
     <!-- Flaticon -->
     <link rel="stylesheet" href="vendor/flaticon/css/uicons-regular-rounded.css">
 
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="vendor/aos/aos.css">
+
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css">
 
@@ -48,13 +51,13 @@
         <section id="hero">
             <div class="container">
                 <div class="main_hero">
-                    <div class="hero_content">
+                    <div class="hero_content" data-aos="fade-up" data-aos-duration="1000">
                         <h1 class="hero_title">Buat Kemampuan Anda Menjadi Lebih Baik.</h1>
                         <p class="subtitle">Belajar dengan guru yang menyenangkan dan telah berpengalaman di bidangnya.
                         </p>
                         <a class="get_started_button" href="register.html">Daftar Sekarang</a>
                     </div>
-                    <img src="img/hero-image.jpg" class="hero_image" alt="">
+                    <img src="img/hero-image.jpg" data-aos="fade-left" data-aos-duration="1000" class="hero_image" alt="">
                 </div>
             </div>
         </section>
@@ -67,25 +70,25 @@
                     <h1 class="title">Kursus Yang Tersedia.</h1>
                     <div class="courses">
                         <a href="#">
-                            <div class="course_card">
+                            <div class="course_card" data-aos="fade-up" data-aos-duration="1000">
                                 <img src="img/web-design.png" class="course_image" />
                                 <h2 class="course_title">Web Design</h2>
                             </div>
                         </a>
                         <a href="#">
-                            <div class="course_card">
+                            <div class="course_card" data-aos="fade-up" data-aos-duration="1000">
                                 <img src="img/frontend-developer.png" class="course_image" />
                                 <h2 class="course_title">Frontend Development</h2>
                             </div>
                         </a>
                         <a href="#">
-                            <div class="course_card">
+                            <div class="course_card" data-aos="fade-up" data-aos-duration="1000">
                                 <img src="img/backend-developer.png" class="course_image" />
                                 <h2 class="course_title">Backend Development</h2>
                             </div>
                         </a>
                         <a href="#">
-                            <div class="course_card">
+                            <div class="course_card" data-aos="fade-up" data-aos-duration="1000">
                                 <img src="img/android-developer.png" class="course_image" />
                                 <h2 class="course_title">Android Development</h2>
                             </div>
@@ -144,10 +147,16 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>Copyright &copy; 2021 by VanDeventer2nd Team.</p>
+            <div class="copyright">
+                <p>Copyright &copy; 2021 by VanDeventer2nd Team</p>
+                <p>from SMK BPP Bandung</p>
+            </div>
         </div>
     </footer>
     <!-- /Footer -->
+
+    <!-- AOS JS -->
+    <script src="vendor/aos/aos.js"></script>
 
     <!-- Main JS -->
     <script src="js/main.js"></script>

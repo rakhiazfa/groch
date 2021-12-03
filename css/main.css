@@ -96,6 +96,8 @@ i {
 ================================== */
 
 .navbar {
+    position: absolute;
+    top: 0;
     z-index: 999;
     display: flex;
     align-items: center;
@@ -219,6 +221,7 @@ i {
 .navbar .navbar_collapse.show {
     position: fixed;
     inset: 0;
+    z-index: 10;
     display: block;
     background-color: rgba(0, 0, 0, 0.9);
 }
@@ -261,9 +264,16 @@ section .title {
 ================================== */
 
 #hero {
-    min-height: 475px;
+    min-height: 600px;
     display: flex;
     align-items: center;
+    padding-top: 5.5rem;
+}
+
+@media screen and(min-width: 768px) {
+    #hero {
+        padding-top: 2rem;
+    }
 }
 
 #hero .main_hero {
@@ -499,6 +509,7 @@ section .title {
 }
 
 .auth .auth_card .form-input {
+    background-color: #EFF6FF;
     font-size: 0.95rem;
     border-radius: 0.3rem;
     margin-bottom: 1rem;
@@ -636,16 +647,23 @@ section .title {
     top: 3.5rem;
     right: 0;
     display: block;
-    width: 225px;
+    width: 200px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.3rem;
-    padding: 0.6rem 1.25rem;
+    
 }
 
 .navbar_login .navbar_collapse .nav_menu .profile .dropdown.active a {
     display: block;
     width: 100%;
-    font-weight: 400    ;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0.65rem 1.25rem;
+    transition: all 0.3s;
+}
+
+.navbar_login .navbar_collapse .nav_menu .profile .dropdown.active a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* ==================================
@@ -653,11 +671,15 @@ section .title {
 ================================== */
 
 footer .container {
-    padding: 2.5rem 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-footer p {
+footer .copyright {
+    padding: 1.5rem 0;
+}
+
+footer .copyright p {
+    font-size: 0.85rem;
     text-align: center;
 }
 
