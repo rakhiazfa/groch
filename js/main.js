@@ -26,15 +26,15 @@ navLinks.forEach((link) => {
     });
 });
 
-window.addEventListener("scroll", function() {
-    if(window.scrollY > 250) {
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 250) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
     }
 });
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
     if (window.innerWidth > 768) {
         navbarCollapse.classList.remove("show");
         menuToggler.classList.remove("toggled");
@@ -55,8 +55,8 @@ const nextButton = testimonial.querySelector(".next_button");
 let activeTestimonial = 0;
 let testimonialCards = document.querySelectorAll(".testimonial_card");
 
-prevButton.addEventListener("click", function() {
-    if(activeTestimonial > 0) {
+prevButton.addEventListener("click", function () {
+    if (activeTestimonial > 0) {
         activeTestimonial -= 1;
         testimonialCards[activeTestimonial + 1].classList.remove("active");
         testimonialCards[activeTestimonial].classList.add("active");
@@ -65,24 +65,25 @@ prevButton.addEventListener("click", function() {
         testimonialCards[0].classList.remove("active");
         testimonialCards[activeTestimonial].classList.add("active");
     }
-    
 });
 
-nextButton.addEventListener("click", function() {
-    if(activeTestimonial < testimonialCards.length - 1) {
+nextButton.addEventListener("click", function () {
+    if (activeTestimonial < testimonialCards.length - 1) {
         activeTestimonial += 1;
         testimonialCards[activeTestimonial - 1].classList.remove("active");
         testimonialCards[activeTestimonial].classList.add("active");
     } else {
         activeTestimonial = 0;
-        testimonialCards[testimonialCards.length - 1].classList.remove("active");
+        testimonialCards[testimonialCards.length - 1].classList.remove(
+            "active"
+        );
         testimonialCards[activeTestimonial].classList.add("active");
     }
 });
 
 setInterval(() => {
     nextButton.click();
-}, 3500)
+}, 3250);
 
 /* ==================================
 - Page Scroll
@@ -90,19 +91,19 @@ setInterval(() => {
 
 const pageScroll = document.querySelectorAll(".page_scroll");
 
-pageScroll.forEach(function(link) {
-    link.addEventListener("click", function(e) {
+pageScroll.forEach(function (link) {
+    link.addEventListener("click", function (e) {
         e.preventDefault();
 
         const href = e.target.getAttribute("href");
-        
+
         const scrollTop = document.querySelector(href).offsetTop;
 
         scroll({
-            top: scrollTop - 125,
-            behavior: "smooth"
-        })
-    })
+            top: scrollTop - 85,
+            behavior: "smooth",
+        });
+    });
 });
 
 /* ==================================

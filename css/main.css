@@ -415,6 +415,7 @@ section .title {
 
 #testimonial .container {
     position: relative;
+    padding: 0 2rem;
 }
 
 #testimonial .main_testimonial .title {
@@ -431,12 +432,12 @@ section .title {
 
 #testimonial .main_testimonial .testimonials .testimonial_card {
     display: none;
-    width: 300px;
+    width: 315px;
 }
 
 @media screen and (min-width: 768px) {
     #testimonial .main_testimonial .testimonials .testimonial_card {
-        width: 350px;
+        width: 325px;
     }
 }
 
@@ -451,9 +452,9 @@ section .title {
 }
 
 #testimonial .main_testimonial .testimonials .testimonial_card .paragraph {
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     text-align: center;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 #testimonial .main_testimonial .testimonials .testimonial_card .student {
@@ -484,6 +485,67 @@ section .title {
 }
 
 /* ==================================
+- Dashboard Page
+================================== */
+
+@media screen and (min-width: 1024px) {
+    #team {
+        min-height: 475px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#team .main_team .title {
+    text-align: center;
+    margin-bottom: 2.75rem;
+}
+
+#team .main_team .team_members {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2.5rem;
+}
+
+@media screen and (min-width: 992px) {
+    #team .main_team .team_members {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+#team .main_team .team_members .member_card {
+    width: 325px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 992px) {
+    #team .main_team .team_members .member_card {
+        width: 250px;
+    }
+}
+
+#team .main_team .team_members .member_card .member_image {
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    #team .main_team .team_members .member_card .member_image {
+        height: 250px;
+    }
+}
+
+#team .main_team .team_members .member_card .member_name {
+    font-weight: 500;
+    text-align: center;
+}
+
+#team .main_team .team_members .member_card .job {
+    font-size: 0.825rem;
+    text-align: center;
+}
+
+/* ==================================
 - Auth Page
 ================================== */
 
@@ -509,7 +571,7 @@ section .title {
 }
 
 .auth .auth_card .form-input {
-    background-color: #EFF6FF;
+    background-color: #FCFCFC;
     font-size: 0.95rem;
     border-radius: 0.3rem;
     margin-bottom: 1rem;
@@ -546,7 +608,7 @@ section .title {
 - Dashboard Page
 ================================== */
 
-.navbar_login {
+.auth_navbar {
     z-index: 999;
     display: flex;
     align-items: center;
@@ -556,7 +618,7 @@ section .title {
     transition: all 0.3s;
 }
 
-.navbar_login .navbar_container {
+.auth_navbar .navbar_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -566,18 +628,18 @@ section .title {
 }
 
 @media screen and (min-width: 768px) {
-    .navbar_login .navbar_container {
+    .auth_navbar .navbar_container {
         padding: 0 3rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .navbar_login .navbar_container {
+    .auth_navbar .navbar_container {
         max-width: 1180px;
     }
 }
 
-.navbar_login .brand_wrapper {
+.auth_navbar .brand_wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -585,45 +647,45 @@ section .title {
 }
 
 @media screen and (min-width: 768px) {
-    .navbar_login .brand_wrapper {
+    .auth_navbar .brand_wrapper {
         width: max-content;
     }
 }
 
-.navbar_login .brand_wrapper .navbar_brand {
+.auth_navbar .brand_wrapper .navbar_brand {
     font-size: 1.45rem;
     font-weight: 700;
     color: var(--primary);
 }
 
-.navbar_login .navbar_collapse {
+.auth_navbar .navbar_collapse {
     display: block;
 }
 
 @media screen and (min-width: 768px) {
-    .navbar_login .navbar_collapse {
+    .auth_navbar .navbar_collapse {
         display: block;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .navbar_login .navbar_collapse .nav_menu {
+    .auth_navbar .navbar_collapse .nav_menu {
         display: flex;
         align-items: center;
         gap: 2.75rem;
     }
 }
 
-.navbar_login .navbar_collapse .nav_menu .nav_link {
+.auth_navbar .navbar_collapse .nav_menu .nav_link {
     font-weight: 400;
     white-space: nowrap;
 }
 
-.navbar_login .navbar_collapse .nav_menu .profile {
+.auth_navbar .navbar_collapse .nav_menu .profile {
     position: relative;
 }
 
-.navbar_login .navbar_collapse .nav_menu .profile .profile_button {
+.auth_navbar .navbar_collapse .nav_menu .profile .profile_button {
     display: flex;
     align-items: center;
     gap: 1.1rem;
@@ -632,17 +694,17 @@ section .title {
     white-space: nowrap;
 }
 
-.navbar_login .navbar_collapse .nav_menu .profile .profile_image {
+.auth_navbar .navbar_collapse .nav_menu .profile .profile_image {
     width: 35px;
     height: 35px;
     border-radius: 50%;
 }
 
-.navbar_login .navbar_collapse .nav_menu .profile .dropdown {
+.auth_navbar .navbar_collapse .nav_menu .profile .dropdown {
     display: none;
 }
 
-.navbar_login .navbar_collapse .nav_menu .profile .dropdown.active {
+.auth_navbar .navbar_collapse .nav_menu .profile .dropdown.active {
     position: absolute;
     top: 3.5rem;
     right: 0;
@@ -653,7 +715,7 @@ section .title {
     
 }
 
-.navbar_login .navbar_collapse .nav_menu .profile .dropdown.active a {
+.auth_navbar .navbar_collapse .nav_menu .profile .dropdown.active a {
     display: block;
     width: 100%;
     font-size: 0.9rem;
@@ -662,8 +724,8 @@ section .title {
     transition: all 0.3s;
 }
 
-.navbar_login .navbar_collapse .nav_menu .profile .dropdown.active a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+.auth_navbar .navbar_collapse .nav_menu .profile .dropdown.active a:hover {
+    background-color: rgba(0, 0, 0, 0.01);
 }
 
 /* ==================================
@@ -678,9 +740,17 @@ footer .copyright {
     padding: 1.5rem 0;
 }
 
-footer .copyright p {
-    font-size: 0.85rem;
+footer .copyright {
+    font-size: 0.875rem;
     text-align: center;
+}
+
+footer .copyright a {
+    font-weight: 400;
+}
+
+footer .copyright a:hover {
+    text-decoration: underline;
 }
 
 /* ==================================
